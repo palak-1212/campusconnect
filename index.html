@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Campus Connect | Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+  <script>
+    /* Apply saved theme before first paint to avoid a flash */
+    (function () { try { var t = localStorage.getItem('cc-theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {} })();
+  </script>
+  <script src="js/data.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+
+    <div class="content">
+      <header class="topbar" id="topbar"></header>
+
+      <main class="page" id="page">
+        <!-- Greeting -->
+        <section class="greeting">
+          <h1 id="greeting">Good morning</h1>
+          <p id="roleLine"></p>
+        </section>
+
+        <!-- Up next -->
+        <section class="hero" id="nextClass" data-roles="student faculty" aria-label="Next class">
+          <div style="flex:1">
+            
+          </div>
+        </section>
+
+        <!-- Quick access -->
+        <section aria-labelledby="qa-title">
+          <div class="section-head">
+            <h2 id="qa-title">Quick access</h2>
+            <button class="link-btn" id="viewAll" aria-expanded="false" aria-controls="quickGrid">
+              <span id="viewAllText">View all</span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+          </div>
+
+          <div class="quick-grid" id="quickGrid">
+            <a class="tile-card tone-orange" data-roles="student faculty" href="canteen.html" data-search="smart canteen food order tokens menu">
+              <span class="tile-icon"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg></span>
+              <span><h3>Smart Canteen</h3><p>Order food, earn tokens</p></span>
+            </a>
+            <a class="tile-card tone-purple" data-roles="student faculty" href="clubs.html" data-search="clubs community events communities feed">
+              <span class="tile-icon"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+              <span><h3>Clubs &amp; Community</h3><p>Join clubs, events and communities</p></span>
+            </a>
+            <a class="tile-card tone-blue" data-roles="student faculty" href="academics.html" data-search="classroom hub attendance timetable grades">
+              <span class="tile-icon"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>
+              <span><h3>Classroom Hub</h3><p>Attendance, timetable and grades</p></span>
+            </a>
+            <a class="tile-card tone-green" data-roles="student placement" href="placement.html" data-search="placement cell drives resume bank resources mentor">
+              <span class="tile-icon"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span>
+              <span><h3>Placement Cell</h3><p>Drives, resume bank and resources</p></span>
+            </a>
+            <a class="tile-card tone-amber is-extra" data-roles="student placement" href="resume.html" data-search="resume hub builder ats score review">
+              <span class="tile-icon"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/></svg></span>
+              <span><h3>Resume Hub</h3><p>Build a resume and check its ATS score</p></span>
+            </a>
+            <a class="tile-card tone-red is-extra" href="notifications.html" data-search="notifications alerts broadcasts announcements">
+              <span class="tile-icon"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></span>
+              <span><h3>Notifications</h3><p>Alerts and campus broadcasts</p></span>
+            </a>
+          </div>
+        </section>
+
+        <!-- Widgets -->
+        <section class="widgets" aria-label="Campus overview">
+          <article class="card" data-roles="student">
+            <div class="card-head">
+              <h2 class="card-title">Attendance</h2>
+              <a class="link-btn" href="academics.html">Details</a>
+            </div>
+            <div class="att-body">
+              <div class="ring" id="attRing" role="img" aria-label="Attendance gauge"></div>
+              <div class="att-subjects" id="attSubjects"></div>
+            </div>
+            <p class="att-note" id="attNote"></p>
+          </article>
+
+          <article class="card" data-roles="student faculty">
+            <div class="card-head">
+              <h2 class="card-title">Today's schedule</h2>
+              <a class="link-btn" href="academics.html">Timetable</a>
+            </div>
+            <ul id="scheduleList"></ul>
+          </article>
+
+          <article class="card" data-roles="student faculty">
+            <div class="card-head">
+              <h2 class="card-title">Canteen token</h2>
+              <a class="link-btn" href="canteen.html">Order food</a>
+            </div>
+            <div class="token-head" id="tokenHead"></div>
+            <ol class="pipeline" id="pipeline" aria-label="Token progress"></ol>
+          </article>
+
+          <article class="card" data-roles="student placement">
+            <div class="card-head">
+              <h2 class="card-title">Placement drives</h2>
+              <a class="link-btn" href="placement.html">All drives</a>
+            </div>
+            <ul id="driveList"></ul>
+          </article>
+
+          <article class="card span-2" data-roles="placement">
+            <div class="card-head">
+              <h2 class="card-title">Placement overview</h2>
+              <a class="link-btn" href="resume.html">Review resumes</a>
+            </div>
+            <div class="stats" id="statsBox"></div>
+          </article>
+
+          <article class="card span-2">
+            <div class="card-head">
+              <h2 class="card-title">Latest notifications</h2>
+              <a class="link-btn" href="notifications.html">See all</a>
+            </div>
+            <ul id="noteList"></ul>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <nav class="bottomnav" id="bottomnav" aria-label="Primary"></nav>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

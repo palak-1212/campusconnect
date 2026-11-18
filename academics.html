@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Campus Connect | Classroom Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+  <script>
+    /* Apply saved theme before first paint to avoid a flash */
+    (function () { try { var t = localStorage.getItem('cc-theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {} })();
+  </script>
+  <script src="js/data.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="academics">
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+
+    <div class="content">
+      <header class="topbar" id="topbar"></header>
+
+      <main class="page" id="page">
+        <section class="greeting">
+          <h1>Classroom Hub</h1>
+          <p>Timetable, attendance and internal marks.</p>
+        </section>
+
+        <section class="card">
+          <div class="card-head"><h2 class="card-title">Today's classes</h2><span class="muted" id="classHint" style="font-size:var(--fs-sm)"></span></div>
+          <ul id="classList"></ul>
+        </section>
+
+        <section class="card">
+          <div class="card-head"><h2 class="card-title">Attendance</h2><span class="badge tone-green" id="attOverall"></span></div>
+          <div class="table-wrap"><table class="table" id="attTable"></table></div>
+          <div class="form-actions" id="attActions" data-roles="faculty"><button class="btn btn-primary" id="saveAtt">Save attendance</button></div>
+        </section>
+
+        <section class="card">
+          <div class="card-head"><h2 class="card-title">Internal marks</h2><span class="badge tone-blue" id="sgpa"></span></div>
+          <div class="table-wrap"><table class="table" id="marksTable"></table></div>
+          <div class="form-actions" data-roles="faculty"><button class="btn btn-primary" id="saveMarks">Save marks</button></div>
+        </section>
+      </main>
+    </div>
+
+    <nav class="bottomnav" id="bottomnav" aria-label="Primary"></nav>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/academics.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Campus Connect | Clubs & Community</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+  <script>
+    /* Apply saved theme before first paint to avoid a flash */
+    (function () { try { var t = localStorage.getItem('cc-theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {} })();
+  </script>
+  <script src="js/data.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="clubs">
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+
+    <div class="content">
+      <header class="topbar" id="topbar"></header>
+
+      <main class="page" id="page">
+        <section class="greeting">
+          <h1>Clubs & Community</h1>
+          <p>Join clubs and register for campus events.</p>
+        </section>
+
+        <section aria-labelledby="clubs-title">
+          <div class="section-head"><h2 id="clubs-title">Clubs</h2></div>
+          <div class="quick-grid" id="clubGrid"></div>
+        </section>
+
+        <section class="card" aria-labelledby="events-title">
+          <div class="card-head"><h2 class="card-title" id="events-title">Upcoming events</h2></div>
+          <ul id="eventList"></ul>
+        </section>
+
+        <section class="card" data-roles="faculty" aria-labelledby="post-title">
+          <div class="card-head"><h2 class="card-title" id="post-title">Post a new event (Faculty)</h2></div>
+          <form class="form-grid" id="eventForm">
+            <div class="field"><label for="evTitle">Event title</label><input id="evTitle" required maxlength="60" placeholder="e.g. Guest lecture on AI"></div>
+            <div class="field"><label for="evClub">Club</label><select id="evClub"></select></div>
+            <div class="field"><label for="evDate">Date and time</label><input id="evDate" required maxlength="40" placeholder="e.g. Mon, Dec 1 - 4:00 PM"></div>
+            <div class="field"><label for="evSeats">Seats</label><input id="evSeats" type="number" min="1" max="500" value="40" required></div>
+            <div class="form-actions"><button class="btn btn-primary" type="submit">Post event</button></div>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <nav class="bottomnav" id="bottomnav" aria-label="Primary"></nav>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/clubs.js"></script>
+</body>
+</html>

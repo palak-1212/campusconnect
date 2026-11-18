@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Campus Connect | Placement Cell</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+  <script>
+    /* Apply saved theme before first paint to avoid a flash */
+    (function () { try { var t = localStorage.getItem('cc-theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {} })();
+  </script>
+  <script src="js/data.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="placement">
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+
+    <div class="content">
+      <header class="topbar" id="topbar"></header>
+
+      <main class="page" id="page">
+        <section class="greeting">
+          <h1>Placement Cell</h1>
+          <p>Campus drives, applications and contacts.</p>
+        </section>
+
+        <section class="card" data-roles="placement" aria-labelledby="add-drive">
+          <div class="card-head"><h2 class="card-title" id="add-drive">Add a placement drive</h2></div>
+          <form class="form-grid" id="driveForm">
+            <div class="field"><label for="dCompany">Company</label><input id="dCompany" required maxlength="40"></div>
+            <div class="field"><label for="dRole">Role</label><input id="dRole" required maxlength="50"></div>
+            <div class="field"><label for="dDate">Drive date</label><input id="dDate" required maxlength="20" placeholder="e.g. Dec 15, 2026"></div>
+            <div class="field"><label for="dCtc">Package (CTC)</label><input id="dCtc" required maxlength="20" placeholder="e.g. 9 LPA"></div>
+            <div class="field"><label for="dElig">Eligibility</label><input id="dElig" required maxlength="30" placeholder="e.g. CGPA 7.0+"></div>
+            <div class="form-actions"><button class="btn btn-primary" type="submit">Add drive</button></div>
+          </form>
+        </section>
+
+        <section aria-labelledby="drives-title">
+          <div class="section-head"><h2 id="drives-title">Drives</h2></div>
+          <div class="stack" id="driveCards"></div>
+        </section>
+
+        <section class="card" data-roles="student">
+          <div class="card-head"><h2 class="card-title">My applications</h2></div>
+          <ul id="myApps"></ul>
+        </section>
+
+        <section class="card">
+          <div class="card-head"><h2 class="card-title">Placement contacts</h2></div>
+          <ul id="contactList"></ul>
+        </section>
+      </main>
+    </div>
+
+    <nav class="bottomnav" id="bottomnav" aria-label="Primary"></nav>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/placement.js"></script>
+</body>
+</html>

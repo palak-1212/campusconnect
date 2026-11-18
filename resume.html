@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Campus Connect | Resume Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+  <script>
+    /* Apply saved theme before first paint to avoid a flash */
+    (function () { try { var t = localStorage.getItem('cc-theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {} })();
+  </script>
+  <script src="js/data.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="resume">
+  <div class="app">
+    <aside class="sidebar" id="sidebar"></aside>
+
+    <div class="content">
+      <header class="topbar" id="topbar"></header>
+
+      <main class="page" id="page">
+        <section class="greeting">
+          <h1>Resume Hub</h1>
+          <p>Build a resume, check its ATS score and get it reviewed.</p>
+        </section>
+
+        <!-- Student view -->
+        <div class="two-col" data-roles="student">
+          <section class="card">
+            <div class="card-head"><h2 class="card-title">Resume builder</h2><span class="badge" id="rStatus"></span></div>
+            <form class="form-stack" id="resumeForm">
+              <div class="form-grid">
+                <div class="field"><label for="rName">Full name</label><input id="rName" maxlength="60"></div>
+                <div class="field"><label for="rEmail">Email</label><input id="rEmail" type="email" maxlength="60"></div>
+                <div class="field"><label for="rPhone">Phone</label><input id="rPhone" maxlength="20"></div>
+                <div class="field"><label for="rEdu">Education</label><input id="rEdu" maxlength="100" placeholder="B.Tech CSE, 2027 - CGPA 8.4"></div>
+              </div>
+              <div class="field"><label for="rSkills">Skills (comma separated)</label><input id="rSkills" maxlength="200" placeholder="Java, Python, SQL, HTML"></div>
+              <div class="field"><label for="rSummary">Summary</label><textarea id="rSummary" rows="3" maxlength="300"></textarea></div>
+              <div class="field"><label for="rProjects">Projects (use numbers, e.g. 500+ records)</label><textarea id="rProjects" rows="4" maxlength="500"></textarea></div>
+              <div class="form-actions">
+                <button class="btn btn-ghost" type="submit">Save draft</button>
+                <button class="btn btn-primary" type="button" id="submitResume">Submit for review</button>
+              </div>
+            </form>
+          </section>
+          <aside class="card">
+            <div class="card-head"><h2 class="card-title">ATS score</h2></div>
+            <div class="att-body"><div class="ring" id="atsRing"></div><ul class="checks" id="atsChecks"></ul></div>
+            <div id="feedbackBox"></div>
+          </aside>
+        </div>
+
+        <!-- Placement Head view -->
+        <section class="card" data-roles="placement">
+          <div class="card-head"><h2 class="card-title">Submitted resumes</h2></div>
+          <ul id="reviewList"></ul>
+        </section>
+      </main>
+    </div>
+
+    <nav class="bottomnav" id="bottomnav" aria-label="Primary"></nav>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/resume.js"></script>
+</body>
+</html>
